@@ -1,0 +1,43 @@
+
+<html>
+<head>
+	<title>Neighborhood Map</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="knockout-3.2.0.js"></script>    
+    <script src="libs/jquery.min.js"></script>
+</head>
+<body>
+	<div class="listings">
+		<h1 >My Neighborhood Map</h1>
+		<img src="" data-bind="attr: {src: photo}"">
+		<h1>Listings:</h1>
+		<input data-bind="textInput: search1, valueUpdate: 'afterkeydown'" />
+		<ul id="listings" data-bind="foreach: filtered">
+			<li data-bind="click: $parent.masterListing.bind($data), text: title">
+				<p data-bind="text: link"></p>
+			</li>
+			<p data-bind="visible: isVisible1, text: description"></p>
+			<p data-bind="visible: isVisible2, text: description"></p>
+			<p data-bind="visible: isVisible3, text: description"></p>
+			<p data-bind="visible: isVisible4, text: description"></p>
+			<p data-bind="visible: isVisible5, text: description"></p>
+			<a id="info" data-bind="visible: isVisible1, text: id, attr: {href: id}"></a>
+			<a id="info" data-bind="visible: isVisible2, text: id,  attr: {href: id}"></a>
+			<a id="info" data-bind="visible: isVisible3, text: id,  attr: {href: id}"></a>	
+			<a id="info" data-bind="visible: isVisible4, text: id,  attr: {href: id}"></a>
+			<a id="info" data-bind="visible: isVisible5, text: id,  attr: {href: id}"></a>
+		</ul>
+		
+	</div>
+	<!--For Map-->
+	<div id="map">
+
+	</div>
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDWP3mPYqI44CnfJp8nuXP5geFGZW6Mj8&v=3&callback=initMap"onerror="errorMessage()"></script>
+
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+#map{
+	width: 850px;
+	height: 900px;
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.listings{
+	margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+img{
+	width: 850px;
+	height: 550px;
+}
+body{
+	color: silver;
+	background-color: black;
+}
+.info{
+	color: :red;
+}
